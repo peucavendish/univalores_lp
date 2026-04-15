@@ -6,35 +6,6 @@
 
 @php
     $u = 'https://univalores.com.br';
-    $states = [
-        'AC' => 'Acre',
-        'AL' => 'Alagoas',
-        'AP' => 'Amapá',
-        'AM' => 'Amazonas',
-        'BA' => 'Bahia',
-        'CE' => 'Ceará',
-        'DF' => 'Distrito Federal',
-        'ES' => 'Espirito Santo',
-        'GO' => 'Goiás',
-        'MA' => 'Maranhão',
-        'MS' => 'Mato Grosso do Sul',
-        'MT' => 'Mato Grosso',
-        'MG' => 'Minas Gerais',
-        'PA' => 'Pará',
-        'PB' => 'Paraíba',
-        'PR' => 'Paraná',
-        'PE' => 'Pernambuco',
-        'PI' => 'Piauí',
-        'RJ' => 'Rio de Janeiro',
-        'RN' => 'Rio Grande do Norte',
-        'RS' => 'Rio Grande do Sul',
-        'RO' => 'Rondônia',
-        'RR' => 'Roraima',
-        'SC' => 'Santa Catarina',
-        'SP' => 'São Paulo',
-        'SE' => 'Sergipe',
-        'TO' => 'Tocantins',
-    ];
 @endphp
 
 @section('content')
@@ -213,37 +184,7 @@
                     <p class="text-lg font-light">Preencha os dados. Em breve entramos em contato para formalizar seu cadastro e enviar o regulamento.</p>
                 </header>
                 <div class="mx-auto max-w-4xl">
-                    <div id="form-sucesso" class="hidden flex items-center gap-4 rounded-2xl bg-secondary-400 p-6 shadow">
-                        <svg class="h-16 w-16 shrink-0 text-primary-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                        <span class="text-xl">Recebemos seu cadastro! Em breve o time Univalores Indica entra em contato.</span>
-                    </div>
-                    <form id="form-contato" class="grid gap-8 lg:grid-cols-2">
-                        <label class="block text-sm font-medium">Nome completo:
-                            <input name="nome" type="text" required class="mt-1 w-full rounded-lg bg-secondary-400 px-4 py-4 text-lg text-white outline-none ring-white/20 focus:ring-2" /></label>
-                        <label class="block text-sm font-medium">E-mail:
-                            <input name="email" type="email" required class="mt-1 w-full rounded-lg bg-secondary-400 px-4 py-4 text-lg text-white outline-none ring-white/20 focus:ring-2" /></label>
-                        <label class="block text-sm font-medium">WhatsApp / telefone:
-                            <input name="telefone" type="tel" required class="mt-1 w-full rounded-lg bg-secondary-400 px-4 py-4 text-lg text-white outline-none ring-white/20 focus:ring-2" /></label>
-                        <label class="block text-sm font-medium">Cidade:
-                            <input name="cidade" type="text" required class="mt-1 w-full rounded-lg bg-secondary-400 px-4 py-4 text-lg text-white outline-none ring-white/20 focus:ring-2" /></label>
-                        <label class="block text-sm font-medium">Estado:
-                            <select name="estado" required class="mt-1 w-full rounded-lg bg-secondary-400 px-4 py-4 text-lg text-white outline-none ring-white/20 focus:ring-2 [&>option]:bg-secondary-400">
-                                @foreach ($states as $code => $label)
-                                    <option value="{{ $code }}">{{ $label }}</option>
-                                @endforeach
-                            </select>
-                        </label>
-                        <label class="block text-sm font-medium lg:col-span-2">Opcional — primeira indicação (nome ou contexto):
-                            <textarea name="indicacao" rows="3" class="mt-1 w-full rounded-lg bg-secondary-400 px-4 py-4 text-lg text-white outline-none ring-white/20 focus:ring-2"></textarea></label>
-                        <label class="flex cursor-pointer items-start gap-3 text-sm lg:col-span-2">
-                            <input type="checkbox" name="aceite" required class="mt-1 size-4 rounded border-white/40 bg-secondary-400 text-primary-500" />
-                            <span class="font-light text-white/90">Declaro que li e concordo em receber o regulamento do programa Univalores Indica e o contato da equipe sobre meu cadastro como embaixador.</span>
-                        </label>
-                        <button type="submit"
-                            class="ui-button col-span-full flex items-center justify-center gap-2 rounded-md border-2 border-transparent bg-primary px-6 py-4 text-lg text-white duration-500 hover:bg-primary lg:col-span-2">
-                            Enviar cadastro
-                        </button>
-                    </form>
+                    <div id="buzzlead-root"></div>
                 </div>
             </div>
         </section>
@@ -255,3 +196,10 @@
 
     @include('partials.site-footer', ['cadastroHref' => url('/indica') . '#cadastro-embaixador'])
 @endsection
+
+@push('scripts')
+    <script>
+        window.campaignId = 'YQWD';
+    </script>
+    <script src="https://static.buzzlead.com.br/widget.js"></script>
+@endpush
