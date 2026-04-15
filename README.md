@@ -1,58 +1,82 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Univalores LP
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Projeto Laravel da landing page da Univalores.
 
-## About Laravel
+Repositorio oficial: [https://github.com/peucavendish/univalores_lp](https://github.com/peucavendish/univalores_lp)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 1) Subir alteracoes para o GitHub
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+No seu computador local, dentro da pasta do projeto:
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git status
+git add .
+git commit -m "Descreva a alteracao"
+git push origin main
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Se estiver usando outra branch, troque `main` pelo nome correto.
 
-## Contributing
+## 2) Deploy em producao (servidor)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Conectar no servidor:
 
-## Code of Conduct
+```bash
+ssh -i "/caminho/da-chave.pem" ubuntu@SEU_HOST
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Entrar no projeto:
 
-## Security Vulnerabilities
+```bash
+cd /var/www/html
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Atualizar codigo + dependencias + build + cache:
 
-## License
+```bash
+git pull origin main
+composer install --no-dev --optimize-autoloader
+npm ci
+npm run build
+sudo -u www-data php artisan migrate --force
+sudo -u www-data php artisan optimize:clear
+sudo -u www-data php artisan optimize
+sudo systemctl reload nginx
+sudo systemctl restart php8.3-fpm
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 3) Permissoes obrigatorias (Laravel)
+
+Se der erro de `Permission denied` em `storage/logs/laravel.log`:
+
+```bash
+cd /var/www/html
+sudo chown -R www-data:www-data storage bootstrap/cache database
+sudo find storage bootstrap/cache -type d -exec chmod 775 {} \;
+sudo find storage bootstrap/cache -type f -exec chmod 664 {} \;
+sudo touch storage/logs/laravel.log
+sudo chown www-data:www-data storage/logs/laravel.log
+sudo chmod 664 storage/logs/laravel.log
+```
+
+## 4) Nginx (Laravel)
+
+O `root` deve apontar para `public`:
+
+```nginx
+root /var/www/html/public;
+```
+
+Depois de alterar Nginx:
+
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+## 5) Troubleshooting rapido
+
+- Erro `not a git repository`: voce nao esta na pasta do projeto (`cd /var/www/html`).
+- Erro `readonly database` (SQLite): ajuste owner/permissoes da pasta `database`.
+- Erro `no such table: sessions/cache`: rode `sudo -u www-data php artisan migrate --force`.
+- Erro 500 apos deploy: rode novamente `optimize:clear` e `optimize` como `www-data`.

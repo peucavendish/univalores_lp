@@ -9,3 +9,11 @@ Route::get('/', function () {
 Route::get('/indica', function () {
     return view('indica');
 });
+
+Route::get('/indica/cadastro', function () {
+    return view('indicado');
+});
+
+Route::get('/indicado', function () {
+    return redirect('/indica/cadastro');
+});
