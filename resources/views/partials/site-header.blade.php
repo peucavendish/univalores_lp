@@ -27,6 +27,15 @@
                 <a href="#ganhos" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Transparência</a>
                 <a href="#faq-indica" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Dúvidas</a>
                 <a href="#cadastro-embaixador" class="site-header__link mt-4 max-lg:inline-flex lg:hidden rounded-3xl border-2 border-white/40 px-6 py-3 text-lg font-semibold text-white duration-200 hover:border-primary-200 hover:bg-primary-500">Quero ser embaixador</a>
+            @elseif ($nav === 'indicado')
+                <a href="#programa" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">O programa</a>
+                <a href="#produtos-iniciais" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">O que cotar</a>
+                <a href="#cotacao" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Seus dados</a>
+                <a href="#como-funciona" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Como funciona</a>
+                <a href="#ser-embaixador" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Ser embaixador</a>
+                <a href="#info-cadastro-indicado" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Quem pode</a>
+                <a href="#faq-indicado" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Dúvidas</a>
+                <a href="#cadastro-indicado" class="site-header__link mt-4 max-lg:inline-flex lg:hidden rounded-3xl border-2 border-white/40 px-6 py-3 text-lg font-semibold text-white duration-200 hover:border-primary-200 hover:bg-primary-500">Preencher para cotar</a>
             @else
                 <a href="{{ $indicaUrl }}" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Indica</a>
                 <a href="{{ $home }}#sobre" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Sobre</a>
@@ -43,6 +52,15 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
                 <span class="whitespace-nowrap">Quero ser embaixador</span>
+            </a>
+        @elseif ($nav === 'indicado')
+            <a class="site-header__cta ui-button group/button hidden items-center justify-center gap-1 rounded-3xl border-2 border-current bg-transparent px-4 py-1.5 text-sm text-inherit duration-500 hover:bg-primary-500 hover:text-white sm:px-5 sm:text-base lg:inline-flex"
+                href="#cadastro-indicado">
+                <svg class="h-5 w-5 shrink-0 duration-500 group-hover/button:-rotate-180 sm:h-6 sm:w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+                <span class="whitespace-nowrap">Preencher para cotar</span>
             </a>
         @else
             <a class="site-header__cta ui-button group/button hidden items-center justify-center gap-1 rounded-3xl border-2 border-current bg-transparent px-4 py-1.5 text-sm text-inherit duration-500 hover:bg-primary-500 hover:text-white sm:px-5 sm:text-base lg:inline-flex"
