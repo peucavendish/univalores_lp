@@ -22,6 +22,135 @@
 }
 
 @layer components {
+    .site-header {
+        @apply fixed left-0 top-0 z-50 flex w-full items-center border-b backdrop-blur-md transition-[background-color,box-shadow,color,border-color] duration-300;
+        min-height: 4.5rem;
+    }
+
+    @media (width >= 64rem) {
+        .site-header {
+            height: 5rem;
+            min-height: 5rem;
+        }
+    }
+
+    .site-header--dark {
+        border-color: rgb(255 255 255 / 0.35);
+        background-color: rgb(24 24 36 / 0.42);
+        color: #fff;
+    }
+
+    .site-header--light {
+        border-color: rgb(234 234 244 / 0.95);
+        background-color: rgb(255 255 255 / 0.94);
+        color: var(--color-secondary-500);
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.06);
+    }
+
+    .site-header--menu-open {
+        border-color: rgb(255 255 255 / 0.28);
+        background-color: rgb(24 24 36 / 0.94);
+        color: #fff;
+        box-shadow: 0 4px 24px -8px rgb(0 0 0 / 0.22);
+    }
+
+    .site-header--dark .site-header__link:hover,
+    .site-header--menu-open .site-header__link:hover {
+        color: var(--color-primary-200);
+    }
+
+    .site-header--light .site-header__link {
+        color: inherit;
+        opacity: 0.95;
+    }
+
+    .site-header--light .site-header__link:hover {
+        color: var(--color-primary-500);
+        opacity: 1;
+    }
+
+    .site-header--dark .site-header__menu-btn,
+    .site-header--menu-open .site-header__menu-btn {
+        border-color: rgb(255 255 255 / 0.45);
+        color: #fff;
+    }
+
+    .site-header--light .site-header__menu-btn {
+        border-color: rgb(24 24 36 / 0.22);
+        color: var(--color-secondary-500);
+    }
+
+    .site-header__link.site-header__link--active {
+        font-weight: 600;
+    }
+
+    .site-header--dark .site-header__link.site-header__link--active,
+    .site-header--menu-open .site-header__link.site-header__link--active {
+        color: var(--color-primary-200);
+        opacity: 1;
+    }
+
+    .site-header--light .site-header__link.site-header__link--active {
+        color: var(--color-primary-500);
+        opacity: 1;
+    }
+
+    @media (width >= 64rem) {
+        .site-header__panel .site-header__link.site-header__link--active {
+            box-shadow: inset 0 -2px 0 0 var(--color-primary-500);
+        }
+
+        .site-header--dark .site-header__panel .site-header__link.site-header__link--active,
+        .site-header--menu-open .site-header__panel .site-header__link.site-header__link--active {
+            box-shadow: inset 0 -2px 0 0 var(--color-primary-200);
+        }
+    }
+
+    @media (width < 64rem) {
+        .site-header__panel .site-header__link.site-header__link--active {
+            box-shadow: none;
+            border-left: 3px solid var(--color-primary-500);
+            padding-left: 0.75rem;
+            margin-left: -0.75rem;
+        }
+
+        .site-header--menu-open .site-header__panel .site-header__link.site-header__link--active {
+            border-left-color: var(--color-primary-200);
+        }
+    }
+
+    .site-header__cta.site-header__cta--active {
+        border-color: var(--color-primary-500);
+        background-color: rgb(230 148 0 / 0.18);
+        color: var(--color-secondary-500);
+    }
+
+    .site-header--dark .site-header__cta.site-header__cta--active,
+    .site-header--menu-open .site-header__cta.site-header__cta--active {
+        border-color: var(--color-primary-200);
+        background-color: rgb(255 207 138 / 0.12);
+        color: #fff;
+    }
+
+    /* Valores nas tabelas Indica: cores fixas para nunca “sumirem” se o build Tailwind estiver desatualizado */
+    .indica-valor-badge {
+        display: inline-flex;
+        flex-shrink: 0;
+        min-width: 8.75rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.75rem;
+        padding: 0.625rem 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+        background-color: #e69400;
+        color: #ffffff;
+        box-shadow: 0 6px 18px -8px rgba(230, 148, 0, 0.75);
+        border: 1px solid rgba(230, 148, 0, 0.45);
+    }
+
     .ui-container {
         @apply max-w-7xl mx-auto px-7 lg:px-0;
     }

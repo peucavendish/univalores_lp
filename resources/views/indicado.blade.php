@@ -7,7 +7,7 @@
     @include('partials.site-header', ['headerNav' => 'indica'])
 
     <main id="main-indicado" class="flex w-full grow flex-col">
-        <section class="bg-secondary-500 py-16 text-white lg:py-24">
+        <section data-header-scheme="dark" class="bg-secondary-500 py-16 text-white lg:py-24">
             <div class="ui-container w-full space-y-4 text-center">
                 <h1 class="text-4xl font-normal -tracking-wide lg:text-5xl">Cadastro de indicado</h1>
                 <p class="mx-auto max-w-2xl text-lg text-white/90">
@@ -16,7 +16,7 @@
             </div>
         </section>
 
-        <section id="cadastro-indicado" class="py-12 lg:py-20">
+        <section id="cadastro-indicado" data-header-scheme="light" class="py-12 lg:py-20">
             <div class="ui-container w-full">
                 <div class="mx-auto max-w-4xl">
                     <div id="buzzlead-form"></div>

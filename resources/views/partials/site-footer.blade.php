@@ -1,5 +1,5 @@
 @php
-    $home = url('/');
+    $home = 'https://univalores.com.br';
     $cadastroHref = $cadastroHref ?? $home . '#cadastro';
 @endphp
 <footer class="border-t border-secondary-500/20">

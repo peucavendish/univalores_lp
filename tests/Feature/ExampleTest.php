@@ -10,10 +10,13 @@ class ExampleTest extends TestCase
     /**
      * A basic test example.
      */
-    public function test_the_application_returns_a_successful_response(): void
+    public function test_the_home_route_is_not_exposed(): void
     {
-        $response = $this->get('/');
+        $this->get('/')->assertNotFound();
+    }
 
-        $response->assertStatus(200);
+    public function test_the_indica_landing_is_available(): void
+    {
+        $this->get('/indica')->assertOk();
     }
 }

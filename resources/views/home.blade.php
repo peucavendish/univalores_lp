@@ -118,7 +118,7 @@
 
     <main id="main" class="flex w-full grow flex-col">
         {{-- Hero --}}
-        <div id="hero-carousel" class="relative min-h-screen bg-secondary-500 text-white">
+        <div id="hero-carousel" data-header-scheme="dark" class="relative min-h-screen bg-secondary-500 text-white">
             <div class="absolute inset-0 overflow-hidden">
                 <div data-hero-slide class="hero-slide hero-slide--active absolute inset-0 bg-cover bg-center bg-fixed">
                     <div class="absolute inset-0 bg-cover bg-center lg:hidden"
@@ -159,7 +159,7 @@
         </div>
 
         {{-- Hub 360 --}}
-        <section class="py-12 lg:py-20">
+        <section data-header-scheme="light" class="py-12 lg:py-20">
             <div class="ui-container w-full space-y-5">
                 <h2 class="text-4xl leading-tight font-normal -tracking-wide lg:flex lg:flex-col">
                     <span>Oferecemos o que você precisa para ir mais longe,</span>
@@ -188,7 +188,7 @@
         </section>
 
         {{-- Para quem --}}
-        <section class="py-12 lg:py-20" id="sobre">
+        <section data-header-scheme="light" class="py-12 lg:py-20" id="sobre">
             <div class="ui-container w-full">
                 <div class="relative grid grid-cols-1 items-start gap-8 lg:grid-cols-7">
                     <header class="space-y-6 lg:sticky lg:top-24 lg:col-span-5">
@@ -217,7 +217,7 @@
         </section>
 
         {{-- Números --}}
-        <section class="bg-base-200 py-12 lg:py-20">
+        <section data-header-scheme="light" class="bg-base-200 py-12 lg:py-20">
             <div class="ui-container w-full">
                 <div class="relative grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
                     <header class="space-y-4 lg:sticky lg:top-24">
@@ -243,7 +243,7 @@
         </section>
 
         {{-- Parceiros --}}
-        <div class="ui-container w-full py-6">
+        <div data-header-scheme="light" class="ui-container w-full py-6">
             <div class="grid w-full grid-cols-1 items-center gap-4 lg:grid-cols-4">
                 <p class="text-lg font-light">
                     Aliada a nomes de peso do mercado, a Univalores entrega confiança, suporte técnico e acesso às melhores soluções para quem quer empreender com solidez.
@@ -258,7 +258,7 @@
         </div>
 
         {{-- Grupo Alta Vista --}}
-        <section class="max-lg:min-h-[50rem] bg-secondary-500 py-12 text-white lg:py-20">
+        <section data-header-scheme="dark" class="max-lg:min-h-[50rem] bg-secondary-500 py-12 text-white lg:py-20">
             <div class="ui-container grid h-full w-full items-center gap-8 lg:grid-cols-2 lg:gap-16">
                 <div class="max-lg:text-center space-y-8">
                     <h3 class="text-3xl font-normal">Parte de um grupo sólido, com visão de longo prazo.</h3>
@@ -284,7 +284,7 @@
         </section>
 
         {{-- Depoimentos --}}
-        <section class="bg-base-200 py-12 lg:py-20">
+        <section data-header-scheme="light" class="bg-base-200 py-12 lg:py-20">
             <div class="ui-container w-full">
                 <header class="space-y-4 text-center">
                     <h2 class="text-4xl font-normal -tracking-wide">Você não precisa confiar na gente...</h2>
@@ -309,7 +309,7 @@
         </section>
 
         {{-- Impulsiona + vídeo --}}
-        <section class="relative bg-black py-12 text-white lg:py-20">
+        <section data-header-scheme="dark" class="relative bg-black py-12 text-white lg:py-20">
             <div class="ui-container grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-2">
                 <div class="relative z-[1] space-y-6">
                     <h2 class="text-4xl font-normal -tracking-wide">Somos uma assessoria que te impulsiona</h2>
@@ -335,7 +335,7 @@
         </section>
 
         {{-- Univalores Day --}}
-        <section class="py-12 lg:py-20">
+        <section data-header-scheme="light" class="py-12 lg:py-20">
             <div class="ui-container grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-5 lg:gap-24">
                 <div class="space-y-6 lg:col-span-2">
                     <h2 class="text-4xl font-normal -tracking-wide">Reconhecemos quem entrega e faz a diferença!</h2>
@@ -355,7 +355,7 @@
         </section>
 
         {{-- Equipe --}}
-        <section class="py-12 lg:py-20" id="equipe">
+        <section data-header-scheme="light" class="py-12 lg:py-20" id="equipe">
             <div class="ui-container grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-5 lg:gap-24">
                 <div class="space-y-5 lg:order-last lg:col-span-2">
                     <h2 class="text-4xl font-normal -tracking-wide">Nosso time de especialistas</h2>
@@ -377,7 +377,7 @@
         </section>
 
         {{-- FAQ --}}
-        <section class="py-12 lg:py-20">
+        <section data-header-scheme="light" class="py-12 lg:py-20">
             <div class="ui-container grid w-full grid-cols-1 items-start gap-8 lg:grid-cols-5">
                 <h2 class="text-4xl font-semibold -tracking-wide">Perguntas <wbr>Frequentes</h2>
                 <div class="space-y-6 lg:col-span-4">
@@ -437,7 +437,7 @@
         </section>
 
         {{-- Formulário --}}
-        <section class="bg-secondary-500 py-12 text-white lg:py-20" id="cadastro">
+        <section data-header-scheme="dark" class="bg-secondary-500 py-12 text-white lg:py-20" id="cadastro">
             <div class="ui-container w-full space-y-4">
                 <header class="space-y-4 text-center">
                     <h2 class="text-4xl font-normal -tracking-wide">Você está pronto para crescer com previsão e segurança?</h2>
@@ -475,7 +475,7 @@
             </div>
         </section>
 
-        <section class="py-16 text-center text-sm text-base-900/70" id="blog">
+        <section data-header-scheme="light" class="py-16 text-center text-sm text-base-900/70" id="blog">
             <p>Conteúdo do blog pode ser ligado aqui no futuro. <a href="https://univalores.com.br/blog" class="text-primary-500 underline" target="_blank" rel="noopener">Ver blog na Univalores</a></p>
         </section>
     </main>
