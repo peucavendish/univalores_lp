@@ -5,7 +5,7 @@
 @endphp
 <header id="site-header"
     class="site-header site-header--dark">
-    <div class="ui-container relative flex w-full max-w-full items-center justify-between gap-3 pe-16 sm:pe-16 lg:pe-0">
+    <div class="ui-container relative flex w-full max-w-full items-center justify-between gap-3 max-lg:pe-16">
         <button type="button" id="nav-toggle" aria-controls="nav-panel" aria-expanded="false"
             class="site-header__menu-btn absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-2xl border p-2 lg:hidden">
             <svg id="nav-toggle-icon" class="h-6 w-6 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none"
