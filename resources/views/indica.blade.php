@@ -24,54 +24,47 @@
             </div>
             <div class="relative z-[1] flex min-h-screen items-center py-24 lg:py-32">
                 <div class="ui-container w-full">
-                    <div class="max-w-6xl">
-                        <p class="text-white/85 uppercase font-semibold" style="font-size: clamp(13px, 1.1vw, 16px); letter-spacing: 0.18em;">
-                            Programa de indicação Univalores
-                        </p>
+                    <div class="grid w-full items-start gap-10 lg:grid-cols-2 lg:gap-10 xl:gap-14">
+                        <div class="max-w-6xl lg:max-w-none">
+                            <p class="text-white/85 uppercase font-semibold" style="font-size: clamp(13px, 1.1vw, 16px); letter-spacing: 0.18em;">
+                                Programa de indicação Univalores
+                            </p>
 
-                        <h1 class="mt-6 max-w-6xl font-semibold tracking-tight text-white" style="font-size: clamp(54px, 7.2vw, 116px); line-height: 0.95;">
-                            Indique.<br>Ganhe at&eacute; <span class="text-primary-200">R$ 600</span>
-                        </h1>
-                        <p class="mt-4 text-white/92" style="font-size: clamp(30px, 2.8vw, 46px); line-height: 1.04;">
-                            por indicação válida
-                        </p>
+                            <h1 class="mt-6 max-w-6xl font-semibold tracking-tight text-white" style="font-size: clamp(54px, 7.2vw, 116px); line-height: 0.95;">
+                                Indique.<br>Ganhe at&eacute; <span class="text-primary-500">R$ 600</span>
+                            </h1>
+                            <p class="mt-4" style="font-size: clamp(30px, 2.8vw, 46px); line-height: 1.04;">
+                                <span class="text-primary-500">por indicação válida</span>
+                            </p>
 
-                        <p class="mt-6 max-w-4xl text-white/84" style="font-size: clamp(20px, 1.7vw, 30px); line-height: 1.26;">
-                            Você indica, a Univalores assessora, e o pagamento acontece com negócio concretizado.
-                        </p>
+                            <p class="mt-6 max-w-4xl text-white/84" style="font-size: clamp(20px, 1.7vw, 30px); line-height: 1.26;">
+                                Você indica, a Univalores assessora, e o pagamento acontece com negócio concretizado.
+                            </p>
 
-                        <br><div class="mt-7 flex flex-wrap gap-x-12 gap-y-3 sm:gap-x-14">
-                            <span class="inline-flex items-center rounded-full border border-white/20 bg-white/8 px-5 py-2.5 text-white/90" style="font-size: clamp(14px, 1vw, 18px);">
-                                Lançamento: consórcio e seguro de vida
-                            </span>
-                            <span class="ml-4 inline-flex items-center rounded-full border border-primary-200/40 bg-primary-500/16 px-5 py-2.5 text-primary-200 sm:ml-6" style="font-size: clamp(14px, 1vw, 18px);">
-                                Tabela de valores transparente
-                            </span>
+                            <br><div class="mt-7 flex flex-wrap gap-x-12 gap-y-3 sm:gap-x-14">
+                                <span class="inline-flex items-center rounded-full border border-white/20 bg-white/8 px-5 py-2.5 text-white/90" style="font-size: clamp(14px, 1vw, 18px);">
+                                    Lançamento: consórcio e seguro de vida
+                                </span>
+                                <span class="inline-flex items-center rounded-full border border-primary-500/40 bg-primary-500/16 px-5 py-2.5 text-primary-500" style="font-size: clamp(14px, 1vw, 18px);">
+                                    Tabela de valores transparente
+                                </span>
+                            </div>
+
+                            <br><div class="mt-9 flex flex-wrap items-center gap-4 lg:mt-11">
+                                <x-univalores.cta href="#cadastro-embaixador" label="Quero ser embaixador" class="px-9 py-4 text-[17px]" />
+                                <a href="#regras-remuneracao"
+                                    class="ui-button inline-flex items-center justify-center gap-1 rounded-3xl bg-white/12 px-9 py-4 text-[17px] text-white duration-500 hover:bg-white/20">
+                                    Ver regras e valores
+                                </a>
+                            </div>
                         </div>
 
-                        <br><div class="mt-9 flex flex-wrap items-center gap-4 lg:mt-11">
-                            <x-univalores.cta href="#cadastro-embaixador" label="Quero ser embaixador" class="px-9 py-4 text-[17px]" />
-                            <a href="#regras-remuneracao"
-                                class="ui-button inline-flex items-center justify-center gap-1 rounded-3xl bg-white/12 px-9 py-4 text-[17px] text-white duration-500 hover:bg-white/20">
-                                Ver regras e valores
-                            </a>
+                        <div id="cadastro-embaixador" class="scroll-mt-28 w-full min-w-0">
+                            <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 sm:p-6 lg:p-8">
+                                <div id="buzzlead-root"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        {{-- Cadastro / formulário (logo após o hero) --}}
-        <section id="cadastro-embaixador" data-header-scheme="dark" class="scroll-mt-28 border-t border-white/10 bg-secondary-500 py-16 text-white lg:py-20">
-            <div class="ui-container w-full space-y-6">
-                <header class="mx-auto max-w-3xl space-y-4 text-center">
-                    <h2 class="text-4xl font-normal -tracking-wide">Seja embaixador Univalores Indica</h2>
-                    <p class="text-lg font-light text-white/90">
-                        Preencha os dados. Em breve entramos em contato para formalizar seu cadastro e enviar o regulamento.
-                    </p>
-                </header>
-                <div class="mx-auto max-w-4xl rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 sm:p-6 lg:p-8">
-                    <div id="buzzlead-root"></div>
                 </div>
             </div>
         </section>
@@ -111,32 +104,46 @@
         <section id="produtos-iniciais" data-header-scheme="light" class="scroll-mt-28 bg-base-100 py-16 text-base-900 lg:py-24">
             <div class="ui-container w-full">
                 <div class="rounded-3xl bg-transparent p-8 lg:p-12">
-                    <p class="text-sm uppercase tracking-[0.18em] text-primary-500">Lançamento inicial</p>
-                    <h2 class="mt-3 text-3xl font-semibold leading-tight lg:text-5xl">
+                    <p class="text-base uppercase tracking-[0.16em] text-primary-500">Lançamento inicial</p>
+                    <h2 class="mt-3 text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
                         Produtos disponíveis no início do programa
                     </h2>
-                    <p class="mt-6 max-w-3xl text-lg leading-relaxed text-base-900/80 lg:text-xl">
+                    <p class="mt-6 max-w-3xl text-xl leading-relaxed text-base-900/80 lg:text-2xl">
                         O indicado poderá distribuir para os seus indicados os produtos iniciais da operação:
                         <strong class="font-semibold text-primary-500">consórcio</strong> e
                         <strong class="font-semibold text-primary-500">seguro de vida</strong>.
                     </p>
-                    <div class="mt-10 grid gap-6 sm:grid-cols-2">
+                    <div class="mt-10 grid gap-8 sm:grid-cols-2 sm:gap-10">
                         <article class="rounded-2xl bg-transparent p-5">
-                            <p class="text-xs uppercase tracking-[0.16em] text-primary-500/90">Produto 01</p>
-                            <h3 class="mt-2 text-2xl font-semibold text-secondary-500">Consórcio</h3>
-                            <p class="mt-2 text-sm text-base-900/70">Solução para planejamento de aquisição com disciplina financeira.</p>
+                            <span class="inline-flex items-center rounded-full border border-primary-500/35 bg-primary-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.12em] text-primary-500">
+                                Produto 01
+                            </span>
+                            <h3 class="mt-4 text-3xl font-semibold text-secondary-500 sm:text-4xl">Consórcio</h3>
+                            <p class="mt-4 text-lg leading-relaxed text-base-900/85 sm:text-xl">Solução incrível para planejamento de aquisição com disciplina financeira.</p>
+                            <div class="mt-6 grid w-full grid-cols-1 gap-3">
+                                <span class="flex min-h-[3rem] w-full items-center justify-center rounded-2xl border border-primary-500/25 bg-primary-500/10 px-4 py-3 text-center text-base font-semibold text-primary-500 shadow-sm">
+                                    Lançamento inicial
+                                </span>
+                            </div>
                         </article>
                         <article class="rounded-2xl bg-transparent p-5">
-                            <p class="text-xs uppercase tracking-[0.16em] text-primary-500/90">Produto 02</p>
-                            <h3 class="mt-2 text-2xl font-semibold text-secondary-500">Seguro de vida</h3>
-                            <p class="mt-2 text-sm text-base-900/70">Proteção financeira com foco em segurança e previsibilidade familiar.</p>
+                            <span class="inline-flex items-center rounded-full border border-primary-500/35 bg-primary-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.12em] text-primary-500">
+                                Produto 02
+                            </span>
+                            <h3 class="mt-4 text-3xl font-semibold text-secondary-500 sm:text-4xl">Seguro de vida</h3>
+                            <p class="mt-4 text-lg leading-relaxed text-base-900/85 sm:text-xl">Proteção financeira com foco em segurança e previsibilidade familiar.</p>
+                            <div class="mt-6 grid w-full grid-cols-1 gap-3">
+                                <span class="flex min-h-[3rem] w-full items-center justify-center rounded-2xl border border-primary-500/25 bg-primary-500/10 px-4 py-3 text-center text-base font-semibold text-primary-500 shadow-sm">
+                                    Lançamento inicial
+                                </span>
+                            </div>
                         </article>
                     </div>
-                    <div class="mt-9 max-w-5xl">
-                        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-primary-500">Em breve</p>
-                        <div class="mt-4 flex flex-wrap gap-x-5 gap-y-4">
+                    <div class="mt-9 w-full">
+                        <p class="text-lg font-semibold uppercase tracking-[0.14em] text-primary-500">Em breve</p><br>
+                        <div class="mt-5 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
                             @foreach (['Investimentos', 'Financiamento Imobiliário', 'Home Equity', 'Câmbio', 'Crédito'] as $produto)
-                                <span class="inline-flex items-center rounded-full border border-secondary-500/15 bg-white px-4 py-2 text-sm font-medium text-secondary-500 shadow-sm">
+                                <span class="flex min-h-[3.25rem] w-full items-center justify-center rounded-2xl border border-secondary-500/15 bg-white px-5 py-3 text-center text-lg font-medium text-secondary-500 shadow-sm">
                                     {{ $produto }}
                                 </span>
                             @endforeach
@@ -238,6 +245,34 @@
                         </p>
                     </article>
                 </div>
+
+                {{-- Remuneração e transparência (após as tabelas; âncora #ganhos) --}}
+                <br><div id="ganhos" class="scroll-mt-28 mt-14 rounded-3xl bg-secondary-500 p-8 text-white shadow-[0_10px_40px_-20px_rgba(10,10,18,0.25)] lg:p-12" data-header-scheme="dark">
+                    <div class="grid w-full gap-12 lg:grid-cols-2 lg:items-center">
+                        <div class="space-y-6">
+                            <h2 class="text-4xl font-normal -tracking-wide">Remuneração e transparência</h2>
+                            <p class="text-lg font-light leading-relaxed text-white/90">
+                                Os valores e gatilhos de pagamento são definidos por <strong>política comercial do programa</strong>, comunicados no seu onboarding e no regulamento. Você sabe o que conta como indicação válida, em qual etapa há pagamento e como receber.
+                            </p>
+                            <p class="text-lg font-light leading-relaxed text-white/90">
+                                Nada de promessa genérica: <strong>embaixadores</strong> trabalham com regras claras e suporte do time Univalores Indica.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-6 lg:gap-8">
+                            @foreach ([
+                                ['t' => 'Indicação qualificada', 'd' => 'critérios objetivos combinados com o time.'],
+                                ['t' => 'Pagamento', 'd' => 'conforme calendário e documentação do programa.'],
+                                ['t' => 'Canal direto', 'd' => 'dúvidas e acompanhamento com a operação.'],
+                                ['t' => 'Crescimento', 'd' => 'possibilidade de evoluir conforme resultado e parceria.'],
+                            ] as $box)
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+                                    <h3 class="font-semibold text-primary-200">{{ $box['t'] }}</h3>
+                                    <p class="mt-2 text-base font-light leading-relaxed text-white/90">{{ $box['d'] }}</p>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -258,7 +293,7 @@
                         <li class="ui-card relative rounded-2xl bg-transparent p-5">
                             <span class="text-sm font-semibold text-primary-500">{{ $step['n'] }}.</span>
                             <h3 class="mt-1 text-xl font-normal">{{ $step['t'] }}</h3>
-                            <p class="mt-3 text-sm leading-relaxed text-base-900/85">{{ $step['d'] }}</p>
+                            <p class="mt-3 text-base leading-relaxed text-base-900/90 sm:text-lg">{{ $step['d'] }}</p>
                         </li>
                     @endforeach
                 </ol>
@@ -292,34 +327,6 @@
             </div>
         </section>
 
-        {{-- Remuneração --}}
-        <section id="ganhos" data-header-scheme="dark" class="scroll-mt-28 bg-secondary-500 py-16 text-white lg:py-24">
-            <div class="ui-container grid w-full gap-12 lg:grid-cols-2 lg:items-center">
-                <div class="space-y-6">
-                    <h2 class="text-4xl font-normal -tracking-wide">Remuneração e transparência</h2>
-                    <p class="text-lg font-light leading-relaxed text-white/90">
-                        Os valores e gatilhos de pagamento são definidos por <strong>política comercial do programa</strong>, comunicados no seu onboarding e no regulamento. Você sabe o que conta como indicação válida, em qual etapa há pagamento e como receber.
-                    </p>
-                    <p class="text-lg font-light leading-relaxed text-white/90">
-                        Nada de promessa genérica: <strong>embaixadores</strong> trabalham com regras claras e suporte do time Univalores Indica.
-                    </p>
-                </div>
-                <div class="grid gap-4 sm:grid-cols-2">
-                    @foreach ([
-                        ['t' => 'Indicação qualificada', 'd' => 'critérios objetivos combinados com o time.'],
-                        ['t' => 'Pagamento', 'd' => 'conforme calendário e documentação do programa.'],
-                        ['t' => 'Canal direto', 'd' => 'dúvidas e acompanhamento com a operação.'],
-                        ['t' => 'Crescimento', 'd' => 'possibilidade de evoluir conforme resultado e parceria.'],
-                    ] as $box)
-                        <div class="rounded-xl bg-transparent p-5">
-                            <h3 class="font-semibold text-primary-200">{{ $box['t'] }}</h3>
-                            <p class="mt-2 text-sm font-light text-white/85">{{ $box['d'] }}</p>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
         {{-- FAQ --}}
         <section id="faq-indica" data-header-scheme="light" class="scroll-mt-28 py-16 lg:py-24">
             <div class="ui-container grid w-full gap-10 lg:grid-cols-5">
@@ -346,11 +353,28 @@
         </section>
 
         <section data-header-scheme="light" class="border-t border-base-200 py-16 text-center text-sm text-base-900/70">
-            <a href="{{ $u }}" class="text-primary-500 underline hover:text-primary-500/90" rel="noopener noreferrer">Site Univalores</a>
-            <span class="mx-2 text-base-900/40" aria-hidden="true">·</span>
-            <a href="{{ url('/indica') }}#main-indica" class="text-primary-500 underline hover:text-primary-500/90">Topo desta página</a>
+            <div class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap sm:gap-3">
+                <a href="#main-indica"
+                    class="ui-button inline-flex items-center justify-center gap-2 rounded-3xl border-2 border-primary-500 bg-primary-500 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-primary hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+                    <svg class="h-5 w-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                    Voltar ao topo
+                </a>
+                <a href="{{ $u }}" class="inline-flex items-center justify-center rounded-3xl border-2 border-secondary-500/20 bg-transparent px-6 py-3 text-base font-medium text-secondary-500 transition hover:border-primary-500/40 hover:text-primary-500" rel="noopener noreferrer">
+                    Site Univalores
+                </a>
+            </div>
         </section>
     </main>
+
+    <a href="#main-indica"
+        class="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full border border-white/25 bg-primary-500 text-white shadow-[0_8px_30px_-8px_rgba(230,148,0,0.55)] transition hover:bg-primary hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 sm:bottom-8 sm:right-8 lg:bottom-10"
+        aria-label="Voltar ao topo da página Indica">
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+        </svg>
+    </a>
 
     @include('partials.site-footer', ['cadastroHref' => url('/indica') . '#cadastro-embaixador'])
 @endsection

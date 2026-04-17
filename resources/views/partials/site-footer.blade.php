@@ -4,12 +4,12 @@
 @endphp
 <footer class="border-t border-secondary-500/20">
     <section class="bg-secondary-500 py-12 text-white lg:py-20">
-        <div class="ui-container flex w-full max-lg:flex-col max-lg:gap-8 lg:gap-8">
-            <div class="w-40 flex-none text-white lg:w-96">
+        <div class="ui-container flex w-full flex-col items-stretch gap-10 lg:flex-row lg:items-start lg:gap-12 xl:gap-16">
+            <div class="w-40 shrink-0 text-white lg:w-56 xl:w-64">
                 @include('partials.logo-univalores')
             </div>
             <div
-                class="grid grow grid-cols-1 *:py-7 max-lg:divide-y max-lg:divide-neutral-500/70 lg:grid-cols-4 lg:gap-8 lg:*:py-0">
+                class="grid min-w-0 flex-1 grid-cols-1 gap-10 *:py-7 max-lg:divide-y max-lg:divide-neutral-500/70 lg:grid-cols-3 lg:gap-10 lg:*:py-0 xl:gap-12">
                 <nav class="space-y-6">
                     <a class="flex items-center gap-5" href="https://www.instagram.com/univalores_oficial" target="_blank"
                         rel="noopener noreferrer">
@@ -39,33 +39,26 @@
                         <span class="font-light">Facebook</span>
                     </a>
                 </nav>
-                <nav class="grid grid-cols-5 gap-8 lg:grid-cols-1 lg:px-12">
-                    <a href="{{ $home }}"
-                        class="col-span-2 flex items-center gap-5 border-b border-white/30 lg:col-span-1"><span>Home</span></a>
-                    <a href="{{ url('/indica') }}" class="col-span-2 flex items-center gap-5 border-b border-white/30 lg:col-span-1"><span>Univalores Indica</span></a>
-                    <a href="{{ $home }}#sobre" class="col-span-2 flex items-center gap-5 border-b border-white/30 lg:col-span-1"><span>Sobre</span></a>
-                    <a href="{{ $home }}#equipe" class="col-span-2 flex items-center gap-5 border-b border-white/30 lg:col-span-1"><span>Equipe</span></a>
-                    <a href="{{ $home }}#blog" class="col-span-2 flex items-center gap-5 border-b border-white/30 lg:col-span-1"><span>Blog</span></a>
-                    <a href="{{ $home }}#cadastro" class="col-span-2 flex items-center gap-5 border-b border-white/30 lg:col-span-1"><span>Contato</span></a>
-                </nav>
                 <div class="space-y-8">
                     <div>
                         <h4 class="mb-4 text-2xl">Endereço:</h4>
-                        <p class="text-sm">
+                        <p class="max-w-sm text-sm leading-relaxed">
                             Rua Henrique Monteiro, nº 22, 10º andar, Pinheiros, São Paulo/SP.
                         </p>
                     </div>
                     <div>
                         <h4 class="mb-4 text-2xl font-light">Horário de atendimento:</h4>
-                        <p class="text-sm">
+                        <p class="max-w-sm text-sm leading-relaxed">
                             Segunda a sexta-feira, das 08h às 18h.
                         </p>
                     </div>
                 </div>
-                <div class="space-y-4">
+                <div class="flex flex-col space-y-4 lg:text-right">
                     <h4 class="text-xl">Contato:</h4>
-                    <p class="text-sm">Quer saber mais sobre a Univalores? Fale conosco</p>
-                    <a class="ui-button group/button inline-flex items-center justify-center gap-1 rounded-3xl bg-primary px-5 py-1.5 text-sm text-white duration-500 hover:bg-primary"
+                    <p class="text-sm leading-relaxed lg:ml-auto lg:max-w-[18rem]">
+                        Quer saber mais sobre a Univalores? Fale conosco
+                    </p>
+                    <a class="ui-button group/button inline-flex items-center justify-center gap-1 self-start rounded-3xl bg-primary px-5 py-1.5 text-sm text-white duration-500 hover:bg-primary lg:self-end"
                         href="{{ $cadastroHref }}">
                         <svg class="h-6 w-6 duration-500 group-hover/button:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

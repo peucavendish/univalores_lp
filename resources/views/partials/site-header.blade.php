@@ -17,14 +17,14 @@
             @include('partials.logo-univalores')
         </a>
         <nav id="nav-panel"
-            class="site-header__panel max-lg:fixed max-lg:inset-x-0 max-lg:bottom-0 max-lg:top-[4.5rem] max-lg:z-40 max-lg:flex max-lg:-translate-x-full max-lg:flex-col max-lg:items-center max-lg:justify-start max-lg:gap-6 max-lg:overflow-y-auto max-lg:bg-secondary-500 max-lg:px-6 max-lg:pb-10 max-lg:pt-10 max-lg:text-white max-lg:transition-transform max-lg:duration-300 lg:flex lg:items-center lg:gap-6 xl:gap-8">
+            class="site-header__panel max-lg:fixed max-lg:inset-x-0 max-lg:top-[4.5rem] max-lg:z-[60] max-lg:flex max-lg:min-h-0 max-lg:max-h-[calc(100dvh-4.5rem)] max-lg:-translate-x-full max-lg:flex-col max-lg:items-center max-lg:justify-start max-lg:gap-6 max-lg:overflow-y-auto max-lg:overscroll-y-contain max-lg:bg-secondary-500 max-lg:px-6 max-lg:pb-[max(2.5rem,env(safe-area-inset-bottom))] max-lg:pt-8 max-lg:text-white max-lg:transition-transform max-lg:duration-300 lg:flex lg:items-center lg:gap-6 xl:gap-8">
             @if ($nav === 'indica')
                 <a href="#programa" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">O programa</a>
                 <a href="#produtos-iniciais" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Produtos</a>
-                <a href="#regras-remuneracao" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Valores</a>
+                <a href="#regras-remuneracao" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Remuneração</a>
                 <a href="#como-funciona" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Como funciona</a>
                 <a href="#embaixadores" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Embaixadores</a>
-                <a href="#ganhos" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Remuneração</a>
+                <a href="#ganhos" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Transparência</a>
                 <a href="#faq-indica" class="site-header__link max-lg:py-1.5 max-lg:text-lg duration-200">Dúvidas</a>
                 <a href="#cadastro-embaixador" class="site-header__link mt-4 max-lg:inline-flex lg:hidden rounded-3xl border-2 border-white/40 px-6 py-3 text-lg font-semibold text-white duration-200 hover:border-primary-200 hover:bg-primary-500">Quero ser embaixador</a>
             @else
